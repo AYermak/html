@@ -1,17 +1,54 @@
-*{
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
+/* 
+Tantek Celik's CSS Reset
+(CC) 2004 Tantek Celik. Some Rights Reserved.
+http://creativecommons.org/licenses/by/2.0
+This style sheet is licensed under a Creative Commons License.
+*/
+:link, :visited {
+	text-decoration: none;
+	}
+ul, ol {
+	list-style: none;
+	}
+h1, h2, h3, h4, h5, h6, pre, code, p {
+	font-size: 1em;
+	}
+ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, pre, 
+form, body, html, p, blockquote, fieldset, input {
+	padding: 0;
 	margin: 0;
-	border: 0;
-}
+	}
+a img, :link img, :visited img {
+	border: none;
+	}
+address {
+	font-style: normal;
+	}
 
-header{
+*   {
+    font-family: 'Roboto', sans-serif;
+    }
+header {
     border-bottom: 1px solid #d9d9d9;
+    height: 80px ;
+    }
+.nav {
+    max-width: 770px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80px;
+    color: #1c1c1c;
+    font-size: 14px;
+    }
+.nav>.active>a:link,.nav>.active>a:visited{
+    color: #1c1c1c;
 }
-
-.circle-list{
+.circle-list {
     background-color: rgb(158, 158, 158);
     width: 47px;
     height: 47px;
-  }
-  
+    }
+    
