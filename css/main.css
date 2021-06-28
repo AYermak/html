@@ -20,21 +20,25 @@ form, body, html, p, blockquote, fieldset, input {
 	}
 a img, :link img, :visited img {
 	border: none;
-	}
+}
 address {
 	font-style: normal;
-	}
+}
 
 *   {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    }
+}
 header {
     border-bottom: 1px solid #d9d9d9;
     height: 80px ;
-    }
-.nav {
+}
+.nav, .content{
     max-width: 770px;
+}
+
+.nav {
+    
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -43,24 +47,33 @@ header {
     min-height: 80px;
     color: #1c1c1c;
     font-size: 14px;
-    }
+}
 .nav>li>a:link,.nav>li>a:visited{
         color: #435993;
     }
 .nav>li.active>a:link,.nav>li.active>a:visited{
     color: #1c1c1c;
 }
-    h1{
+.content{
+    margin: auto;
+
+}
+h1 {
     font-size: 43.207px;
-    color: rgb(28, 28, 28);
     line-height: 1.2;
     text-align: center;
-    font-weight: lighter;   
-    }
-.circle-list {
-    background-color: rgb(158, 158, 158);
+    font-weight: lighter;
+    margin-top: 100px;
+        
+}
+h1,h2{
+    color: rgb(28, 28, 28);
+    text-align: center;
+}
+.svg {
     width: 47px;
     height: 47px;
-    }
-
-      
+    flex-direction: row;
+    margin: auto;
+    display: block;
+}
