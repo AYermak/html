@@ -27,6 +27,7 @@ address {
 
 *   {
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     }
 header {
     border-bottom: 1px solid #d9d9d9;
@@ -43,12 +44,23 @@ header {
     color: #1c1c1c;
     font-size: 14px;
     }
-.nav>.active>a:link,.nav>.active>a:visited{
+.nav>li>a:link,.nav>li>a:visited{
+        color: #435993;
+    }
+.nav>li.active>a:link,.nav>li.active>a:visited{
     color: #1c1c1c;
 }
+    h1{
+    font-size: 43.207px;
+    color: rgb(28, 28, 28);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: lighter;   
+    }
 .circle-list {
     background-color: rgb(158, 158, 158);
     width: 47px;
     height: 47px;
     }
-    
+
+      
