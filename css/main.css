@@ -46,7 +46,7 @@ header {
     align-items: center;
     min-height: 80px;
     color: #1c1c1c;
-    font-size: 14px;
+    font-size: 14pt;
 }
 .nav>li>a:link,.nav>li>a:visited{
         color: #435993;
@@ -56,24 +56,29 @@ header {
 }
 .content{
     margin: auto;
-
+    text-align: center;
 }
 h1 {
-    font-size: 43.207px;
+    font-size: 70px;
     line-height: 1.2;
-    text-align: center;
     font-weight: lighter;
     margin-top: 100px;
         
 }
+h2{
+    font-size: 30px; 
+}
 h1,h2{
     color: rgb(28, 28, 28);
-    text-align: center;
+    
+}
+.input-text {
+    padding: 100px;
+    display: block;
 }
 .svg {
     width: 47px;
     height: 47px;
-    flex-direction: row;
     margin: auto;
-    display: block;
+    display: inline-block;
 }
