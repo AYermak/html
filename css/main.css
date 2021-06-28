@@ -74,18 +74,26 @@ h1,h2{
     
 }
 .input-text {
-    text-align: center;
-    display: block;
     min-width: 100%;
+}
+select,.input-text{
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    font-size: 24px;
     margin-bottom: 25px;
     height: 58px;
-    font-size: 24px;
-    border-radius: 5px;
-    border: 1px solid #c8c8c8;
 }
 .svg {
     width: 47px;
     height: 47px;
     margin: 25px auto;
     display: inline-block;
+}
+option{
+    text-align: center;
+    color: red;
+    display: inline;
+    margin: auto;
 }

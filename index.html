@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>questionnaire</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -28,9 +27,26 @@
         <h2>Личная информация</h2>
         <form action="#" method="post">
             <input class="input-text" type="text" name="" placeholder="ФИО" id="">
-            <input class="input-text" type="datetime-local" name="" placeholder="ФИО" id="">
+            <input class="input-text" type="text" name="" placeholder="ФИО" id="">
+            <input class="input-text" list="sity-list" type="text" name="" placeholder="Город рождения" id="">
+            <select name="sity" id="" placeholder="lol">
+                <option >Год рожденя</option>
+                <option value="1995">1995</option>
+                <option value="1995">1995</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+            </select>
             <input class="input-text" type="email" name="" placeholder="email" id="">
             <input class="input-text" type="skype" name="" placeholder="skype" id="">
+            <datalist id="sity-list">
+                <option>Абай</option>
+                <option>Акколь</option>
+                <option>Аксай</option>
+                <option>Актау</option>
+                <option>Алматы</option>
+                <option>Астана</option>
+            </datalist> 
         </form>
         <img class="circle-list svg" src="images/svg/circle-list.svg" alt="circle-list">
     </div>
