@@ -75,6 +75,7 @@ h1,h2{
 }
 .input-text {
     min-width: 100%;
+    
 }
 select,.input-text{
     text-align: center;
@@ -85,15 +86,48 @@ select,.input-text{
     margin-bottom: 25px;
     height: 58px;
 }
+
 .svg {
     width: 47px;
     height: 47px;
     margin: 25px auto;
     display: inline-block;
 }
-option{
-    text-align: center;
-    color: red;
-    display: inline;
+
+
+.func-input{
+    position: relative;
+}
+.label{
+    top: 16px;
+    font-size: 24px;
     margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+.func-input input:not(:-ms-placeholder-shown) + .label{
+    color: #adadad;
+    transform: translate(0, -16px) scale(0.55);
+    transition: all 0.3s ease;
+}
+.func-input input:not(:placeholder-shown) + .label,.func-input input:focus + .label{
+    color: #adadad;
+    transform: translate(0, -16px) scale(0.55);
+    transition: all 0.3s ease;
+}
+input:hover,input:active{
+    border-color: #01018f;
+}
+
+select,.label{
+    color: #adadad;
+    font-size: 20px;
+}
+select,.input-text,input:hover,input:active{
+    transition: border-color 0.3s ease;
 }

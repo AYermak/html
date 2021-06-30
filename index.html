@@ -26,11 +26,14 @@
         <img class="circle-book svg" src="images/svg/circle-book.svg" alt="circle-list">
         <h2>Личная информация</h2>
         <form action="#" method="post">
-            <input class="input-text" type="text" name="" placeholder="ФИО" id="">
+            <div class="func-input">
+                <input class="input-text" type="text" name="" placeholder=" " id="">
+            <span class="label" >ФИО</span>
+            </div>
             <input class="input-text" type="text" name="" placeholder="ФИО" id="">
             <input class="input-text" list="sity-list" type="text" name="" placeholder="Город рождения" id="">
             <select name="sity" id="" placeholder="lol">
-                <option >Год рожденя</option>
+                <option class="lt" >Год рожденя</option>
                 <option value="1995">1995</option>
                 <option value="1995">1995</option>
                 <option value="1993">1993</option>
@@ -40,7 +43,7 @@
             <input class="input-text" type="email" name="" placeholder="email" id="">
             <input class="input-text" type="skype" name="" placeholder="skype" id="">
             <datalist id="sity-list">
-                <option>Абай</option>
+                <option >Абай</option>
                 <option>Акколь</option>
                 <option>Аксай</option>
                 <option>Актау</option>
@@ -50,5 +53,11 @@
         </form>
         <img class="circle-list svg" src="images/svg/circle-list.svg" alt="circle-list">
     </div>
+    <script>
+        if(document.getElementsByClassName("input-text").hasFocus()){
+
+        }
+        alert(document.getElementsByClassName("input-text").hasFocus())
+    </script>
 </body>
 </html>
