@@ -73,34 +73,30 @@ h1,h2{
     color: rgb(28, 28, 28);
     
 }
-.input-text {
-    min-width: 100%;
-    
-}
+
 select,.input-text{
     text-align: center;
     display: inline-block;
     border: 1px solid #c8c8c8;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 25px;
-    height: 58px;
+    min-height: 35px;
+    padding: 15px 0 5px 0;
+ 
 }
-
 .svg {
     width: 47px;
     height: 47px;
     margin: 25px auto;
     display: inline-block;
 }
-
-
 .func-input{
     position: relative;
 }
 .label{
-    top: 16px;
-    font-size: 24px;
+    top: 17px;
+    font-size: 20px;
     margin: auto;
     left: 0;
     right: 0;
@@ -108,7 +104,6 @@ select,.input-text{
     position: absolute;
     pointer-events: none;
     transition: all 0.3s ease;
-
 }
 .func-input input:not(:-ms-placeholder-shown) + .label{
     color: #adadad;
@@ -119,15 +114,50 @@ select,.input-text{
     color: #adadad;
     transform: translate(0, -16px) scale(0.55);
     transition: all 0.3s ease;
+
+}
+input:focus{
+    border-color: #01018f;
+    outline: none;
+}
+.input-text {
+    width: 100%;  
+}
+input{
+    max-width: 520px;
+
+}
+form{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 input:hover,input:active{
     border-color: #01018f;
 }
-
 select,.label{
     color: #adadad;
     font-size: 20px;
 }
 select,.input-text,input:hover,input:active{
     transition: border-color 0.3s ease;
+}
+.checkbox{
+    width: 18px;
+    height: 18px;
+    border-color: rgb(67, 89, 147);
+    border-radius: 3px;
+}
+
+.checkbox-conteiner{
+    text-align: justify;
+}
+.cb-row{
+    display: inline-block;
+    width: 33%;
+}
+
+@media screen and (max-width:  600px) {
+    .cb-row{
+        display: inline;
+    }
 }

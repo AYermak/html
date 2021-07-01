@@ -20,18 +20,17 @@
         </ul>
     </header>
     <div class="content">
-        <h1>
-            Анкета
-        </h1>
-        <img class="circle-book svg" src="images/svg/circle-book.svg" alt="circle-list">
-        <h2>Личная информация</h2>
         <form action="#" method="post">
+
+            <h1>
+                Анкета
+            </h1>
+            <img class="circle-book svg" src="images/svg/circle-book.svg" alt="circle-list">
+            <h2>Личная информация</h2>
             <div class="func-input">
-                <input class="input-text" type="text" name="" placeholder=" " id="">
-            <span class="label" >ФИО</span>
+                <input class="input-text" type="text" name="FullName" placeholder=" ">
+                <span class="label" >ФИО</span>
             </div>
-            <input class="input-text" type="text" name="" placeholder="ФИО" id="">
-            <input class="input-text" list="sity-list" type="text" name="" placeholder="Город рождения" id="">
             <select name="sity" id="" placeholder="lol">
                 <option class="lt" >Год рожденя</option>
                 <option value="1995">1995</option>
@@ -40,24 +39,80 @@
                 <option value="1992">1992</option>
                 <option value="1991">1991</option>
             </select>
-            <input class="input-text" type="email" name="" placeholder="email" id="">
-            <input class="input-text" type="skype" name="" placeholder="skype" id="">
-            <datalist id="sity-list">
-                <option >Абай</option>
-                <option>Акколь</option>
-                <option>Аксай</option>
-                <option>Актау</option>
-                <option>Алматы</option>
-                <option>Астана</option>
-            </datalist> 
+            <div class="func-input">
+                <input class="input-text" type="email" name="email" placeholder=" " >
+                <span class="label" >email</span>
+            </div>
+            <div class="func-input">
+                <input class="input-text" type="email" name="skype" placeholder=" " >
+                <span class="label" >skype</span>
+            </div>
+            <img class="circle-list svg" src="images/svg/circle-list.svg" alt="circle-list">
+            <h2>Расскажите о своем опыте</h2>
+            <div class="checkbox-conteiner">
+                <div  class="cb-row">
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            БЭМ/OOCSS
+                        </span>
+                    </div>
+                <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Stylus/LESS/SASS
+                        </span>
+                </div>
+                <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Работаю с SVG 
+                        </span>
+                </div>
+                </div>
+                <div class="cb-row">
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Верстаю семантично
+                        </span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            ES2015/ES2016
+                        </span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Gulp/GRUNT
+                        </span>
+                    </div>
+                </div>
+                <div  class="cb-row" >
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Webpack
+                        </span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            jQuery
+                        </span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox">
+                        <span>
+                            Ипользую Git
+                        </span>
+                    </div>
+                </div>
+            
+            </div>
         </form>
-        <img class="circle-list svg" src="images/svg/circle-list.svg" alt="circle-list">
     </div>
-    <script>
-        if(document.getElementsByClassName("input-text").hasFocus()){
-
-        }
-        alert(document.getElementsByClassName("input-text").hasFocus())
-    </script>
 </body>
 </html>
