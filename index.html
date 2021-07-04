@@ -11,25 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header" >
         <ul class="nav">
-            <li class="active"><a href="#">Личная информация </a></li>
-            <li><a href="#">Опыт</a></li>
-            <li><a href="#">JavaScript </a></li>
-            <li><a href="#">О себе</a></li>
+            <li class="nav__item nav__item_active"><a class="nav__link" href="#">Личная информация </a></li>
+            <li class="nav__item "><a class="nav__link" href="#">Опыт</a></li>
+            <li class="nav__item "><a class="nav__link" href="#">JavaScript </a></li>
+            <li class="nav__item "><a class="nav__link" href="#">О себе</a></li>
         </ul>
+        <div class="header__burger">
+            <div class="header__burger_item"></div>
+            <div class="header__burger_item"></div>
+            <div class="header__burger_item"></div>
+        </div>
     </header>
     <div class="content">
-        <form action="#" method="post">
-
+        <form action="#" method="post" class="form">
             <h1>
                 Анкета
             </h1>
-            <img class="circle-book svg" src="images/svg/circle-book.svg" alt="circle-list">
+            <img class="form__svg" src="images/svg/circle-book.svg" alt="circle-list">
             <h2>Личная информация</h2>
-            <div class="func-input">
-                <input class="input-text" type="text" name="FullName" placeholder=" ">
-                <span class="label" >ФИО</span>
+            <div class="form__elem">
+                <input class="form__input" type="text" name="FullName" placeholder=" ">
+                <span class="form__label" >ФИО</span>
             </div>
             <select name="sity" id="" placeholder="lol">
                 <option class="lt" >Год рожденя</option>
@@ -39,72 +43,72 @@
                 <option value="1992">1992</option>
                 <option value="1991">1991</option>
             </select>
-            <div class="func-input">
-                <input class="input-text" type="email" name="email" placeholder=" " >
-                <span class="label" >email</span>
+            <div class="form__elem">
+                <input class="form__input" type="email" name="email" placeholder=" " >
+                <span class="form__label" >email</span>
             </div>
-            <div class="func-input">
-                <input class="input-text" type="email" name="skype" placeholder=" " >
-                <span class="label" >skype</span>
+            <div class="form__elem">
+                <input class="form__input" type="email" name="skype" placeholder=" " >
+                <span class="form__label" >skype</span>
             </div>
-            <img class="circle-list svg" src="images/svg/circle-list.svg" alt="circle-list">
+            <img class="form__svg" src="images/svg/circle-list.svg" alt="circle-list">
             <h2>Расскажите о своем опыте</h2>
-            <div class="checkbox-conteiner">
-                <div  class="cb-row">
+            <div class="form__checkbox-conteiner">
+                <div  class="form__row">
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="bem" class="form__checkbox">
                         <span>
                             БЭМ/OOCSS
                         </span>
                     </div>
                 <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="SASS" class="form__checkbox">
                         <span>
                             Stylus/LESS/SASS
                         </span>
                 </div>
                 <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="SVG" class="form__checkbox">
                         <span>
                             Работаю с SVG 
                         </span>
                 </div>
                 </div>
-                <div class="cb-row">
+                <div class="form__row">
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox"name="semantically" class="form__checkbox">
                         <span>
                             Верстаю семантично
                         </span>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="ES2015" class="form__checkbox">
                         <span>
                             ES2015/ES2016
                         </span>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="Gulp" class="form__checkbox">
                         <span>
                             Gulp/GRUNT
                         </span>
                     </div>
                 </div>
-                <div  class="cb-row" >
+                <div  class="form__row" >
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="Webpack" class="form__checkbox">
                         <span>
                             Webpack
                         </span>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="jQuery" class="form__checkbox">
                         <span>
                             jQuery
                         </span>
                     </div>
                     <div>
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" name="Git" class="form__checkbox">
                         <span>
                             Ипользую Git
                         </span>
@@ -112,6 +116,36 @@
                 </div>
             
             </div>
+            <img class="form__svg" src="images/svg/circle-js.svg" alt="circle-list">
+            <h2>Уровень владения JavaScript</h2>
+            <input type="range" name="input-range-js" class="input-range-js" step="25" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+            <div>
+
+            </div>
+            <img class="form__svg" src="images/svg/circle-about.svg" alt="circle-list">
+            <h2>Расскажите о себе</h2>
+            <p>
+                Напишите несколько предложений, чем привлекла наша вакансия
+и что вы ожидаете от работы у нас.
+            </p>
+
+            <textarea name="text-about" class="form__textarea" >
+
+            </textarea>
+            <input type="submit" class="form__button">
         </form>
     </div>
 </body>

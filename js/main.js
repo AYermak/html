@@ -1,0 +1,1 @@
+let adaptiveMenu = document.getElementsByClassName("");

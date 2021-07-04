@@ -29,9 +29,14 @@ address {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
-header {
+.header {
     border-bottom: 1px solid #d9d9d9;
     height: 80px ;
+}
+@media screen and (max-width:  600px) {
+    .nav{
+        max-width: 100%;
+    }
 }
 .nav, .content{
     max-width: 770px;
@@ -39,19 +44,19 @@ header {
 
 .nav {
     
-    margin: auto;
+    margin: 0px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 80px;
+    height: 100%;
     color: #1c1c1c;
     font-size: 14pt;
 }
-.nav>li>a:link,.nav>li>a:visited{
+.nav__link:link,.nav__link:visited{
         color: #435993;
     }
-.nav>li.active>a:link,.nav>li.active>a:visited{
+.nav__item_active>.nav__link:link,.nav__item_active>.nav__link:visited{
     color: #1c1c1c;
 }
 .content{
@@ -74,7 +79,7 @@ h1,h2{
     
 }
 
-select,.input-text{
+select,.form__input{
     text-align: center;
     display: inline-block;
     border: 1px solid #c8c8c8;
@@ -83,18 +88,18 @@ select,.input-text{
     margin-bottom: 25px;
     min-height: 35px;
     padding: 15px 0 5px 0;
- 
+    
 }
-.svg {
+.form__svg {
     width: 47px;
     height: 47px;
     margin: 25px auto;
     display: inline-block;
 }
-.func-input{
+.form__elem{
     position: relative;
 }
-.label{
+.form__label{
     top: 17px;
     font-size: 20px;
     margin: auto;
@@ -104,60 +109,85 @@ select,.input-text{
     position: absolute;
     pointer-events: none;
     transition: all 0.3s ease;
+    color: #c8c8c8;
+
 }
-.func-input input:not(:-ms-placeholder-shown) + .label{
+.form__elem input:not(:-ms-placeholder-shown) + .form__label{
     color: #adadad;
     transform: translate(0, -16px) scale(0.55);
     transition: all 0.3s ease;
 }
-.func-input input:not(:placeholder-shown) + .label,.func-input input:focus + .label{
+.form__input:not(:placeholder-shown) + .form__label,.form__input:focus + .form__label{
     color: #adadad;
     transform: translate(0, -16px) scale(0.55);
     transition: all 0.3s ease;
 
 }
-input:focus{
+.form__input:focus{
     border-color: #01018f;
     outline: none;
 }
-.input-text {
-    width: 100%;  
-}
-input{
-    max-width: 520px;
 
+.form__input {
+    width: 100%;  
+    max-width: 520px;
 }
-form{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-input:hover,input:active{
+
+.form__input:hover,.form__input:active{
     border-color: #01018f;
 }
-select,.label{
-    color: #adadad;
-    font-size: 20px;
-}
-select,.input-text,input:hover,input:active{
+
+.form__input,.form__input:hover,.form__input:active{
     transition: border-color 0.3s ease;
 }
-.checkbox{
+.form__checkbox{
     width: 18px;
     height: 18px;
     border-color: rgb(67, 89, 147);
     border-radius: 3px;
 }
 
-.checkbox-conteiner{
+.form__checkbox-conteiner{
     text-align: justify;
 }
-.cb-row{
+.form__row{
     display: inline-block;
-    width: 33%;
+    width: 31.2%;
 }
 
 @media screen and (max-width:  600px) {
-    .cb-row{
+    .form__row{
         display: inline;
     }
+    .form{
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+}
+.input-range-js{
+    width: 100%;
+    transform: rotateX(45deg);
+    
+}
+
+.form__button{
+    background-color: rgb(38, 86, 168);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 120px;
+    display: block;
+}
+
+.form__textarea{
+    display: block;
+    height: 180px;
+    width: 100%;
+    max-width: 520px;
+    resize: none;
+}
+.form__textarea,.form__button{
+    margin: 25px auto ;
 }
