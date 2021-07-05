@@ -56,11 +56,20 @@ color: #1c1c1c;
 }
 .header__burger{
     display: none;
+    cursor: pointer;
+
 }
 
 @media screen and (max-width:  600px) {
     .nav{
-        display: none;
+        display: block;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        z-index: 100;
+        opacity: 0;
+        transition: all 0.2s ease;
+        z-index: -100;
     }
     .header__burger{
         display: block;
@@ -76,7 +85,7 @@ color: #1c1c1c;
         margin: 5px;
         border-radius: 5px;
         background: black;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
     .header__burger_active .header__burger_item:first-child{
         transform: rotate(45deg) translate(5px, 6px);
@@ -87,7 +96,18 @@ color: #1c1c1c;
     .header__burger_active .header__burger_item:last-child{
         transform: rotate(-45deg) translate(5px, -6px);
     } 
-    
+    .nav__active{
+        z-index: 100;
+        opacity: 1;
+    }
+    .nav__item:first-child{
+        border-top: 1px solid #d9d9d9;
+    }
+    .nav__item{
+        padding: 10px;
+        background: rgb(247, 247, 247);
+        border-bottom: 1px solid #d9d9d9;
+    }
 } 
 
 .content{
@@ -110,7 +130,7 @@ h1,h2{
     
 }
 
-select,.form__input{
+.form__input{
     text-align: center;
     display: inline-block;
     border: 1px solid #c8c8c8;
@@ -121,15 +141,97 @@ select,.form__input{
     padding: 15px 0 5px 0;
     
 }
-.form__svg {
+
+
+.form__svg_circle {
     width: 47px;
     height: 47px;
     margin: 25px auto;
     display: inline-block;
 }
+.form__select{
+    border: #c8c8c8 1px solid;
+    cursor: pointer;
+    text-align: center;
+    display: table;
+    height: 52px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-right: 25px;
+    padding-left: 10px;
+    min-width: 125px;
+}
+
+
+.form__select>span{
+    display:table-cell;
+    vertical-align:middle;
+    color: #adadad;
+}
+.form__svg_arrow{
+    display: table-cell;
+    vertical-align: middle;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    right: 3px;
+
+}
+.form__svg_arrow_active{
+    transform: rotate(90deg);
+}
+.form__svg_arrow + .form__select_items{
+    z-index: -1;
+    opacity: 0;
+}
+
+.form__svg_arrow_active + .form__select_items{
+    z-index: 10;
+    opacity: 1;
+}
+.form__select_item{
+    display: block;
+    transition: all 0.3s ease;
+    padding: 3px 0px ;
+    color: #435993;
+   
+}
+.form__select_item:hover{
+    width: 100%;
+    background: #ececec;
+    padding: 8px 0px ;
+
+
+}
+.form__select_items{
+    left: -1px;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    top: 55px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+
+}
+.form__select_items_active{
+    z-index: 100;
+    opacity: 0;
+    
+}
 .form__elem{
     position: relative;
 }
+
 .form__label{
     top: 17px;
     font-size: 20px;
@@ -196,11 +298,6 @@ select,.form__input{
         
     }
 }
-.input-range-js{
-    width: 100%;
-    transform: rotateX(45deg);
-    
-}
 
 .form__button{
     background-color: rgb(38, 86, 168);
@@ -213,7 +310,6 @@ select,.form__input{
 }
 
 .form__textarea{
-    display: block;
     height: 180px;
     width: 100%;
     max-width: 520px;

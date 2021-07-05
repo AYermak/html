@@ -13,37 +13,48 @@
 </head>
 <body>
     <header class="header" >
-        <ul class="nav">
-            <li class="nav__item nav__item_active"><a class="nav__link" href="#">Личная информация </a></li>
-            <li class="nav__item "><a class="nav__link" href="#">Опыт</a></li>
-            <li class="nav__item "><a class="nav__link" href="#">JavaScript </a></li>
-            <li class="nav__item "><a class="nav__link" href="#">О себе</a></li>
-        </ul>
         <div class="header__burger">
             <div class="header__burger_item"></div>
             <div class="header__burger_item"></div>
             <div class="header__burger_item"></div>
         </div>
+        <ul class="nav ">
+            <li class="nav__item nav__item_active"><a class="nav__link" href="#">Личная информация </a></li>
+            <li class="nav__item "><a class="nav__link" href="#">Опыт</a></li>
+            <li class="nav__item "><a class="nav__link" href="#">JavaScript </a></li>
+            <li class="nav__item "><a class="nav__link" href="#">О себе</a></li>
+        </ul>
     </header>
     <div class="content">
         <form action="#" method="post" class="form">
             <h1>
                 Анкета
             </h1>
-            <img class="form__svg" src="images/svg/circle-book.svg" alt="circle-list">
+            <img class="form__svg_circle" src="images/svg/circle-book.svg" alt="circle-list">
             <h2>Личная информация</h2>
             <div class="form__elem">
-                <input class="form__input" type="text" name="FullName" placeholder=" ">
+                <input class="form__input" type="text" name="name" placeholder=" ">
                 <span class="form__label" >ФИО</span>
             </div>
-            <select name="sity" id="" placeholder="lol">
-                <option class="lt" >Год рожденя</option>
-                <option value="1995">1995</option>
-                <option value="1995">1995</option>
-                <option value="1993">1993</option>
-                <option value="1992">1992</option>
-                <option value="1991">1991</option>
-            </select>
+            <div class="form__select">
+                <input class="form__select_input_year_hidden" type="hidden" name="year" placeholder=" " value=" " >
+                <span class="form__select_span">Год рождения</span>
+                <img class="form__svg_arrow" src="images/svg/Move-left.svg">
+                <div class="form__select_items">
+                    <div class="form__select_item">1988</div>
+                    <div class="form__select_item">1989</div>
+                    <div class="form__select_item">1990</div>
+                    <div class="form__select_item">1991</div>
+                    <div class="form__select_item">1992</div>
+                    <div class="form__select_item">1993</div>
+                    <div class="form__select_item">1994</div>
+                    <div class="form__select_item">1995</div>
+                    <div class="form__select_item">1996</div>
+                    <div class="form__select_item">1997</div>
+                    <div class="form__select_item">1998</div>
+                </div>
+            </div>
+            
             <div class="form__elem">
                 <input class="form__input" type="email" name="email" placeholder=" " >
                 <span class="form__label" >email</span>
@@ -52,7 +63,7 @@
                 <input class="form__input" type="email" name="skype" placeholder=" " >
                 <span class="form__label" >skype</span>
             </div>
-            <img class="form__svg" src="images/svg/circle-list.svg" alt="circle-list">
+            <img class="form__svg_circle" src="images/svg/circle-list.svg" alt="circle-list">
             <h2>Расскажите о своем опыте</h2>
             <div class="form__checkbox-conteiner">
                 <div  class="form__row">
@@ -117,7 +128,7 @@
                 </div>
             
             </div>
-            <img class="form__svg" src="images/svg/circle-js.svg" alt="circle-list">
+            <img class="form__svg_circle" src="images/svg/circle-js.svg" alt="circle-list">
             <h2>Уровень владения JavaScript</h2>
             <input type="range" name="input-range-js" class="input-range-js" step="25" list="tickmarks">
             <datalist id="tickmarks">
@@ -136,11 +147,10 @@
             <div>
 
             </div>
-            <img class="form__svg" src="images/svg/circle-about.svg" alt="circle-list">
+            <img class="form__svg_circle" src="images/svg/circle-about.svg" alt="circle-list">
             <h2>Расскажите о себе</h2>
             <p>
-                Напишите несколько предложений, чем привлекла наша вакансия
-и что вы ожидаете от работы у нас.
+                Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
             </p>
 
             <textarea name="text-about" class="form__textarea" >
