@@ -8,6 +8,9 @@ let form__select_span_2 = document.querySelector(".form__select_span_2");
 let form__select_item = document.getElementsByClassName("form__select_item");
 let form__select_input_year_hidden = document.querySelector(".form__select_input_year_hidden");
 
+
+
+
 header__burger.addEventListener(
     "click",
     () => {
@@ -35,7 +38,6 @@ for(let i = 0; i < form__select_item.length; i++){
     form__select_item[i].addEventListener(
         'click',
         () => {
-            //console.log(form__select_item[i].innerHTML);
             form__select_span_2.style.color = "black";
             form__select_span_2.classList.add("form__select_span_2_active");
             form__select_span_2.innerHTML = form__select_item[i].innerHTML;
@@ -43,3 +45,17 @@ for(let i = 0; i < form__select_item.length; i++){
         }
     )
 }
+
+//Helper
+document.addEventListener(
+    "click",
+    (e) => {
+        
+        if(!form__select.contains(e.target) && form__svg_arrow.classList.contains('form__svg_arrow_active') ){
+            form__svg_arrow.classList.remove('form__svg_arrow_active')
+            if(form__select_span_2.innerHTML == ""){
+                form__select_span_1.classList.remove("form__select_span_1_active");
+            }
+        }
+    }
+)
