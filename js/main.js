@@ -10,7 +10,7 @@ let form__select_input_year_hidden = document.querySelector(".form__select_input
 
 
 
-
+//Menu 
 header__burger.addEventListener(
     "click",
     () => {
@@ -22,7 +22,7 @@ header__burger.addEventListener(
         }
     }
 )
-
+//Select click active
 form__select.addEventListener(
     "click",
     () => {
@@ -33,7 +33,7 @@ form__select.addEventListener(
         }
     }
 )
-
+//Select item click active
 for(let i = 0; i < form__select_item.length; i++){
     form__select_item[i].addEventListener(
         'click',
