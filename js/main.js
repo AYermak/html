@@ -7,6 +7,7 @@ let form__select_span_1 = document.querySelector(".form__select_span_1");
 let form__select_span_2 = document.querySelector(".form__select_span_2");
 let form__select_item = document.getElementsByClassName("form__select_item");
 let form__select_input_year_hidden = document.querySelector(".form__select_input_year_hidden");
+let form__range_dot = document.querySelector(".form__range_dot");
 
 
 
@@ -59,3 +60,5 @@ document.addEventListener(
         }
     }
 )
+
+

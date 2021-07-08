@@ -370,4 +370,69 @@ h1,h2{
 
   }
 
-  
+.form__range{
+    height: 10px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+}
+.form__range_line{
+    background: #435993;
+    height: 100%;
+    width: 100%;
+}
+.form__range_dot{
+    background: white;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    bottom: -24px;
+    border-radius: 10px 0px 10px 10px;
+    left: 0%;
+    right: 0%;
+    border: 2px solid #adadad;
+    transform: rotate(-45deg);
+    z-index: 1000;
+}
+
+.range{
+    background: #435993;
+    width: 100%;
+}
+
+.range {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #9a905d;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #1332bb;
+    margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #ffffff;
+    top: 20px;
+    box-shadow: -800px 0 0 800px #43e5f7;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #43e5f7; 
+}
+input[type="range"]::-moz-range-track {  
+    background-color: #9a905d;
+}
+input[type="range"]::-ms-fill-lower {
+    background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+    background-color: #9a905d;
+}
