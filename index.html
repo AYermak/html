@@ -146,15 +146,9 @@
             <img class="form__svg_circle" src="images/svg/circle-js.svg" alt="circle-list">
             <h2>Уровень владения JavaScript</h2>
             <div class="form__range">
-                <input type="range" list="tickmarks" class="range" >
-                <datalist id="tickmarks">
-                    <option value="0" label="0%"></option>
-                    <option value="25" label="25%"></option>
-                    <option value="50" label="50%"></option>
-                    <option value="100" label="100%"></option>
-                </datalist>
+                <div class="form__range_line"></div>
+                <div class="form__range_dot"></div>
             </div>
-           
             
 
             <img class="form__svg_circle" src="images/svg/circle-about.svg" alt="circle-list">
@@ -162,11 +156,12 @@
             <p>
                 Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
             </p>
-            <textarea name="text-about" class="form__textarea" ></textarea>
+
+            <textarea name="text-about" class="form__textarea" >
+            </textarea>
             <input type="submit" class="form__button">
         </form>
     </div>
     <script src="js/main.js" defer></script>
-    <script src="js/jquery-3.6.0.min.js" defer></script>
 </body>
 </html>
