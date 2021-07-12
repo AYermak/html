@@ -62,10 +62,26 @@ document.addEventListener(
     }
 )
 
+let status = false;
+
 form__range_dot.addEventListener(
+    "mousedown",
+    () => {
+        status = true;
+    }
+)
+document.addEventListener(
+    "mouseup",
+    () => {
+        status = false;
+    }
+)
+
+document.addEventListener(
     "mousemove",
     (e) => {
-        if( e.clientX - form__range.getBoundingClientRect().left > 0 && e.clientX - form__range.getBoundingClientRect().right < 0){
+
+        if(status && e.clientX - form__range.getBoundingClientRect().left > 0 && e.clientX - form__range.getBoundingClientRect().right < 0){
             form__range_dot.style.left = e.clientX - form__range.getBoundingClientRect().left - form__range_dot.offsetWidth / 2  + 'px';
         }
     }

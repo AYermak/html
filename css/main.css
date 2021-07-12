@@ -161,9 +161,8 @@ h1,h2{
     position: relative;
     margin-left: auto;
     margin-right: auto; 
-    padding-right: 25px;
-    padding-left: 25px;
-    min-width: 125px;
+    min-width: 320px;
+
 }
 
 
@@ -175,6 +174,7 @@ h1,h2{
     right: 0;
     top: 14px;
     transition: all 0.3s ease;
+    
 }
 .form__select_span_1_active{
     font-size: 12px;
@@ -183,7 +183,7 @@ h1,h2{
     left: 0;
     right: 0;
     top: 4px;
-    
+
 }
 .form__select_span_2{
     position: absolute;
@@ -304,12 +304,19 @@ h1,h2{
 .form__checkbox{
     width: 18px;
     height: 18px;
-    border-color: rgb(67, 89, 147);
+    border-color: #435993;
     border-radius: 3px;
+    
 }
-
+.form__checkbox:hover,.form__checkbox:active{
+    background-color: #01018f;
+}
+.form__checkbox:checked{
+    background-color: #8f0137;
+}
 .form__checkbox-conteiner{
     text-align: justify;
+    margin: 10px;
 }
 .form__row{
     display: inline-block;
@@ -328,7 +335,7 @@ h1,h2{
 }
 
 .form__button{
-    background-color: rgb(38, 86, 168);
+    background-color: #435993;
     color: white;
     border-radius: 10px;
     border: none;
@@ -340,8 +347,15 @@ h1,h2{
 .form__textarea{
     height: 180px;
     width: 100%;
-    max-width: 520px;
+    max-width: 505px;
     resize: none;
+    font-size: 20px;
+    padding: 15px;
+    border: #e5e5e5 1px solid;
+    border-radius: 5px;
+}
+.form__textarea::-webkit-input-placeholder { 
+    color: #c8c8c8; 
 }
 .form__textarea,.form__button{
     margin: 25px auto ;
@@ -372,30 +386,23 @@ h1,h2{
 
 .form__range{
     height: 10px;
-    width: 100%;
     position: relative;
     margin-bottom: 25px;
+    margin: 0px 10px;
 }
 .form__range_line{
     background: #435993;
     height: 100%;
-    width: 100%;
 }
 .form__range_dot{
     background: white;
     position: absolute;
     height: 15px;
     width: 15px;
-
+    left: -8.5px;
     bottom: -24px;
     border-radius: 10px 0px 10px 10px;
-
     border: 2px solid #adadad;
     transform: rotate(-45deg);
     z-index: 1000;
-}
-
-.range{
-    background: #435993;
-    width: 100%;
 }

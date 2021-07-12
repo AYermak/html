@@ -69,76 +69,62 @@
                     <div class="form__select_item">2000</div>
                 </div>
             </div>
-            
             <div class="form__elem">
-                <input class="form__input" type="email" name="email" placeholder=" " >
-                <span class="form__label" >email</span>
+                <input class="form__input" type="text" name="sity" placeholder=" " >
+                <span class="form__label" >Место проживания</span>
             </div>
             <div class="form__elem">
                 <input class="form__input" type="text" name="skype" placeholder=" " >
                 <span class="form__label" >skype</span>
+            </div>
+            <div class="form__elem">
+                <input class="form__input" type="email" name="email" placeholder=" " >
+                <span class="form__label" >email</span>
             </div>
             <img class="form__svg_circle" src="images/svg/circle-list.svg" alt="circle-list">
             <h2>Расскажите о своем опыте</h2>
             <div class="form__checkbox-conteiner">
                 <div  class="form__row">
                     <div>
-                        <input type="checkbox" name="bem" class="form__checkbox">
-                        <span>
-                            БЭМ/OOCSS
-                        </span>
+                        <input type="checkbox" name="bem" id="OOCSS" class="form__checkbox">
+                        <label for="OOCSS">БЭМ/OOCSS</label>  
                     </div>
                 <div>
-                        <input type="checkbox" name="SASS" class="form__checkbox">
-                        <span>
-                            Stylus/LESS/SASS
-                        </span>
+                    <input type="checkbox" name="SASS" id="SASS" value="Stylus/LESS/SASS" class="form__checkbox">
+                    <label for="SASS">Stylus/LESS/SASS</label>  
                 </div>
                 <div>
-                        <input type="checkbox" name="SVG" class="form__checkbox">
-                        <span>
-                            Работаю с SVG 
-                        </span>
+                        <input type="checkbox" name="SVG" id="SVG" class="form__checkbox">
+                        <label for="SVG">Работаю с SVG</label>  
                 </div>
                 </div>
                 <div class="form__row">
                     <div>
-                        <input type="checkbox"name="semantically" class="form__checkbox">
-                        <span>
-                            Верстаю семантично
-                        </span>
+                        <input type="checkbox"name="semantically" id="sm" class="form__checkbox">
+                        <label for="sm">Верстаю семантично</label>  
+
                     </div>
                     <div>
-                        <input type="checkbox" name="ES2015" class="form__checkbox">
-                        <span>
-                            ES2015/ES2016
-                        </span>
+                        <input type="checkbox" name="ES2015" id="ES" class="form__checkbox">
+                        <label for="ES">ES2015/ES2016</label>  
                     </div>
                     <div>
-                        <input type="checkbox" name="Gulp" class="form__checkbox">
-                        <span>
-                            Gulp/GRUNT
-                        </span>
+                        <input type="checkbox" name="Gulp" id="Gulp" class="form__checkbox">
+                        <label for="Gulp">Gulp/GRUNT</label> 
                     </div>
                 </div>
                 <div  class="form__row" >
                     <div>
-                        <input type="checkbox" name="Webpack" class="form__checkbox">
-                        <span>
-                            Webpack
-                        </span>
+                        <input type="checkbox" name="Webpack" id="Webpack" class="form__checkbox">
+                        <label for="Webpack">Webpack</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="jQuery" class="form__checkbox">
-                        <span>
-                            jQuery
-                        </span>
+                        <input type="checkbox" name="jQuery" id="jQuery" class="form__checkbox">
+                        <label for="jQuery">jQuery</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="Git" class="form__checkbox">
-                        <span>
-                            Ипользую Git
-                        </span>
+                        <input type="checkbox" name="Git" id="Git" class="form__checkbox">
+                        <label for="Git">Ипользую Git</label>
                     </div>
                 </div>
             
@@ -157,8 +143,7 @@
                 Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
             </p>
 
-            <textarea name="text-about" class="form__textarea" >
-            </textarea>
+            <textarea name="text-about" class="form__textarea" placeholder="Понравилась тем, что..."></textarea>
             <input type="submit" class="form__button">
         </form>
     </div>
